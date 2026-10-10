@@ -25,7 +25,7 @@ function FormularioNino({ grupos, alGuardar, alCancelar }) {
     if (Object.keys(nuevosErrores).length > 0) return;
 
    alGuardar({ nombre, fechaNacimiento, nombreAcudiente: acudiente, grupo: { id: grupo } });
-
+};
   return (
     <form className="formulario-nino" onSubmit={manejarEnvio}>
       <h2>Registrar niño</h2>

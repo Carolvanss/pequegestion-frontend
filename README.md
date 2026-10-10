@@ -1,16 +1,9 @@
-# React + Vite
+## Trazabilidad: historia de usuario → código
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+| Historia de usuario | Componente(s) | Archivo | Endpoint de la API (AA3) |
+|---|---|---|---|
+| HU-01 Ingresar al sistema | FormularioLogin · PaginaLogin | components/FormularioLogin.jsx | (validación local) |
+| HU-02 Ver resumen y menú | PaginaInicio · TarjetaResumen · Encabezado | pages/PaginaInicio.jsx | GET /api/ninos |
+| HU-03 Registrar niño | FormularioNino · PaginaRegistrarNino | components/FormularioNino.jsx | POST /api/ninos · GET /api/grupos |
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Nota: por ahora los servicios de `src/services/` devuelven datos simulados mientras la API se estabiliza; los endpoints indicados son los que se conectarán.

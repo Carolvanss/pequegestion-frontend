@@ -24,8 +24,7 @@ function FormularioNino({ grupos, alGuardar, alCancelar }) {
     setErrores(nuevosErrores);
     if (Object.keys(nuevosErrores).length > 0) return;
 
-    alGuardar({ nombreCompleto: nombre, fechaNacimiento, acudiente, grupoId: grupo });
-  };
+   alGuardar({ nombre, fechaNacimiento, nombreAcudiente: acudiente, grupo: { id: grupo } });
 
   return (
     <form className="formulario-nino" onSubmit={manejarEnvio}>

@@ -1,6 +1,9 @@
 // services/grupoService.js: comunicación con la API REST de AA3
-const API_URL = "http://localhost:8080/api/grupos";
-
-// HU-03: consultar los grupos para llenar la lista del formulario
+// HU-03: datos simulados mientras la API no esté estable.
+// Para conectarla: fetch("http://localhost:8080/api/grupos").then((respuesta) => respuesta.json())
 export const listarGrupos = () =>
-  fetch(API_URL).then((respuesta) => respuesta.json());
+  Promise.resolve([
+    { id: 1, nombre: "Sala Cuna" },
+    { id: 2, nombre: "Párvulos A" },
+    { id: 3, nombre: "Párvulos B" },
+  ]);
